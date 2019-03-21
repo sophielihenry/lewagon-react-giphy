@@ -9,17 +9,7 @@ import '../assets/stylesheets/application.scss';
 //   return <div> Hello {props.name} </div>
 // };
 
-
-// const root = document.getElementById('root');
-// // if root exists
-// if (root) {
-// // callsthe function and injects HTML inside the id named root
-//   ReactDOM.render(<Hello name="sophie"/>, root)
-// }
-
-
-
-class Hello extends Component {
+class Morning extends Component {
   constructor(props) {
     super(props);
 
@@ -41,13 +31,55 @@ class Hello extends Component {
   // use this with class notation
   // add class if state clicked is true
       <div className={this.state.clicked ? 'clicked' : null }
-        onClick={this.handleClick} >
-        Hello {this.props.name}
+        onClick={this.handleClick}>
+         Good morning {this.props.name}
       </div>
-
       )
   }
+}
 
+
+class Evening extends Component {
+  constructor(props) {
+    super(props);
+
+
+  this.state = {
+    clicked: false
+  }
+}
+
+  handleClick = () => {
+    this.setState({
+      clicked: !this.state.clicked
+
+    })
+  }
+
+  render() {
+    return (
+      <div className={this.state.clicked ? 'clickedEvening' : null }
+        onClick={this.handleClick}>
+          Good evening {this.props.name}
+        </div>
+      )
+  }
+}
+
+
+
+
+const root = document.getElementById('root');
+// if root exists
+if (root) {
+// callsthe function and injects HTML inside the id named root
+  ReactDOM.render(<Morning name="sophie"/>, root)
+}
+
+
+const roota = document.getElementById('roota')
+if (roota) {
+  ReactDOM.render(<Evening name="Henry"/>, roota)
 }
 
 
