@@ -15,13 +15,15 @@ class Morning extends Component {
 
 // state is information that can change
     this.state = {
-      clicked: false
+      clicked: false,
+      counter: 0
     };
   }
 // this is bound to Component
   handleClick = () => {
     this.setState({
-      clicked:  !this.state.clicked
+      clicked:  !this.state.clicked,
+      counter: this.state.counter + 2
     })
   }
 
@@ -33,39 +35,11 @@ class Morning extends Component {
       <div className={this.state.clicked ? 'clicked' : null }
         onClick={this.handleClick}>
          Good morning {this.props.name}
+         {this.state.counter}
       </div>
       )
   }
 }
-
-
-class Evening extends Component {
-  constructor(props) {
-    super(props);
-
-
-  this.state = {
-    clicked: false
-  }
-}
-
-  handleClick = () => {
-    this.setState({
-      clicked: !this.state.clicked
-
-    })
-  }
-
-  render() {
-    return (
-      <div className={this.state.clicked ? 'clickedEvening' : null }
-        onClick={this.handleClick}>
-          Good evening {this.props.name}
-        </div>
-      )
-  }
-}
-
 
 
 
@@ -77,10 +51,6 @@ if (root) {
 }
 
 
-const roota = document.getElementById('roota')
-if (roota) {
-  ReactDOM.render(<Evening name="Henry"/>, roota)
-}
 
 
 
