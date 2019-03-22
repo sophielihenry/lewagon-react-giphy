@@ -2,6 +2,49 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
+import App from './components/app.jsx'
+
+
+const root = document.getElementById('root')
+  if (root) {
+    ReactDOM.render( <App/> , root)
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // want to attach this component to the DOM
 // props is an object that cannot be changed
@@ -9,46 +52,45 @@ import '../assets/stylesheets/application.scss';
 //   return <div> Hello {props.name} </div>
 // };
 
-class Morning extends Component {
-  constructor(props) {
-    super(props);
+// class Morning extends Component {
+//   constructor(props) {
+//     super(props);
 
-// state is information that can change
-    this.state = {
-      clicked: false,
-      counter: 0
-    };
-  }
-// this is bound to Component
-  handleClick = () => {
-    this.setState({
-      clicked:  !this.state.clicked,
-      counter: this.state.counter + 2
-    })
-  }
+// // state is information that can change
+//     this.state = {
+//       clicked: false,
+//       counter: 0
+//     };
+//   }
+// // this is bound to Component
+//   handleClick = () => {
+//     this.setState({
+//       clicked:  !this.state.clicked,
+//       counter: this.state.counter + 1
+//     })
+//   }
 
-  render() {
-  // build and return HTML
-    return (
-  // use this with class notation
-  // add class if state clicked is true
-      <div className={this.state.clicked ? 'clicked' : null }
-        onClick={this.handleClick}>
-         Good morning {this.props.name}
-         {this.state.counter}
-      </div>
-      )
-  }
-}
-
+//   render() {
+//   // build and return HTML
+//     return (
+//   // use this with class notation
+//   // add class if state clicked is true
+//       <div className={this.state.clicked ? 'clicked' : null }
+//         onClick={this.handleClick}>
+//          Good morning {this.props.name} {this.state.counter}
+//       </div>
+//       )
+//   }
+// }
 
 
-const root = document.getElementById('root');
-// if root exists
-if (root) {
-// callsthe function and injects HTML inside the id named root
-  ReactDOM.render(<Morning name="sophie"/>, root)
-}
+
+// const root = document.getElementById('root');
+// // if root exists
+// if (root) {
+// // callsthe function and injects HTML inside the id named root
+//   ReactDOM.render(<Morning name="sophie"/>, root)
+// }
 
 
 
