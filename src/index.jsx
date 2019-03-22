@@ -14,38 +14,6 @@ const root = document.getElementById('root')
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // want to attach this component to the DOM
 // props is an object that cannot be changed
 // const Hello = (props) => {
