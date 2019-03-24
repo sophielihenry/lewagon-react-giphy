@@ -1,28 +1,12 @@
 import React, { Component } from 'react';
-import giphy from 'giphy-api'
-
 
 class SearchBar extends Component {
 
   handleUpdate = (event) => {
+    {this.props.search(event.target.value)}
 
-    this.search(event.target.value);
 
   }
-
-      search = (query) => {
-    giphy('5m8SxNykexIdWD04TD5x6AwgY5WxlSoc').search({
-          q: query,
-          rating: 'g'
-        }, (error, result) => {
-          this.setState({
-            gifs: result.data
-          })
-
-        });
-  }
-
-
 
   render() {
     return (
