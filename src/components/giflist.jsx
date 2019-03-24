@@ -6,7 +6,6 @@ class Giflist extends Component {
     return this.props.gifs.map(gif => <Gif id={gif.id}/>)
   }
 
-
   render() {
     return (
      <div className="gif-list">
