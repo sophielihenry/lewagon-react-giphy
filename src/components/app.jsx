@@ -13,11 +13,10 @@ class App extends Component {
       gifs: [],
       selectedGifId: "6nps2nX9fGV9K"
     }
-    // this.search(event.target.value);
   }
 
-        search = (query) => {
-    giphy('5m8SxNykexIdWD04TD5x6AwgY5WxlSoc').search({
+    search = (query) => {
+      giphy('5m8SxNykexIdWD04TD5x6AwgY5WxlSoc').search({
           q: query,
           rating: 'g',
           limit: 15
@@ -28,14 +27,7 @@ class App extends Component {
         });
   }
 
-
-
   render() {
-    const gifs = [
-        { id: "6nps2nX9fGV9K"},
-        { id: "6nps2nX9fGV9K"}
-      ]
-
     return (
       <div>
         <div className="left-scene">
