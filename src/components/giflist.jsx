@@ -3,19 +3,13 @@ import Gif from './gif.jsx'
 
 class Giflist extends Component {
   renderList =() => {
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={Math.random()}/>
+    return this.props.gifs.map(gif => <Gif id={gif.id} key={Math.random()} selectGif={this.props.selectGif}/>
       )
-    }
-
-    handleClick(e) {
-      e.preventDefault();
-      console.log(e.target);
     }
 
   render() {
     return (
-     <div className="gif-list"
-          onClick={this.handleClick}>
+     <div className="gif-list">
       {this.renderList()}
      </div>
     )
@@ -23,4 +17,7 @@ class Giflist extends Component {
  }
 
 export default Giflist;
+
+
+
 
