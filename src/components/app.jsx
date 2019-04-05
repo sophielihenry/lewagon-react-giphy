@@ -15,8 +15,8 @@ class App extends Component {
     }
   }
 
-  selectGif = (selectedId)=> {
-    this.setState({ selectedGifId: selectedId})
+  selectGif = (id)=> {
+    this.setState({ selectedGifId: id})
   }
 
 
