@@ -20,7 +20,7 @@ body {
 }
 
 .left-scene {
-  flex: 0 0 50%;
+  flex: 0 0 40%;
   position: sticky;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@ body {
 }
 
 .right-scene {
-  flex: 0 0 50%;
+  flex: 0 0 60%;
   background-color: #ecf0f1;
   overflow: scroll;
 
