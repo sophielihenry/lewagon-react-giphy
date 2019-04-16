@@ -7,6 +7,10 @@ class Giflist extends Component {
                                            key={Math.random()}
                                            deleteGif={this.props.deleteGif}
                                            selectGif={this.props.selectGif}/>
+
+
+
+
       )
     }
 
