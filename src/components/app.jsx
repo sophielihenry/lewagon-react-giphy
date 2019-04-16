@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   deleteGif = (id) => {
-    console.log(id)
+    this.setState({ gifs: this.state.gifs.filter(gif => gif.id !== id)})
   }
 
 
