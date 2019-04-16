@@ -19,6 +19,10 @@ class App extends Component {
     this.setState({ selectedGifId: id})
   }
 
+  deleteGif = (id) => {
+    console.log(id)
+  }
+
 
   search = (query) => {
     giphy('5m8SxNykexIdWD04TD5x6AwgY5WxlSoc').search({
@@ -42,7 +46,7 @@ class App extends Component {
             </div>
         </div>
         <div className="right-scene">
-          <Giflist gifs ={this.state.gifs} selectGif={this.selectGif}/>
+          <Giflist gifs ={this.state.gifs} selectGif={this.selectGif} deleteGif={this.deleteGif}/>
         </div>
       </div>
       )

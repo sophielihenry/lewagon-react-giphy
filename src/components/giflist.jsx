@@ -3,7 +3,10 @@ import Gif from './gif.jsx'
 
 class Giflist extends Component {
   renderList =() => {
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={Math.random()} selectGif={this.props.selectGif}/>
+    return this.props.gifs.map(gif => <Gif id={gif.id}
+                                           key={Math.random()}
+                                           deleteGif={this.props.deleteGif}
+                                           selectGif={this.props.selectGif}/>
       )
     }
 
