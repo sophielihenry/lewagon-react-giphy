@@ -2,9 +2,10 @@ body {
   font-family: Helvetica;
 }
 
-// .gifResize {
-//   display: flex;
-// }
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
 
 #root > div {
   display: flex;
@@ -55,9 +56,9 @@ body {
 }
 
 .deleteGiphy {
-  position: relative;
-  left: 55vh;
-  bottom: -5vh;
+  position: absolute;
+  top:0;
+  right:0;
   background: none;
   border: none;
   color: white;

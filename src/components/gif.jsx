@@ -5,8 +5,7 @@ class Gif extends Component {
       const src = `https://media1.giphy.com/media/${this.props.id}/giphy.gif`
 
     return (
-      <div className="gifResize">
-
+      <div className="wrapper">
         <img src={src}
              alt=""
              className="gif"
@@ -14,8 +13,6 @@ class Gif extends Component {
 
     { this.props.hideButton ? null :   <button className="deleteGiphy"
                   onClick={() => this.props.deleteGif(this.props.id)}>x</button> }
-
-
       </div>
       );
   }
