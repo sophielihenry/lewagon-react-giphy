@@ -34,14 +34,10 @@
     "react-scripts": "^2.1.8",
     "serve": "^11.0.0"
   },
- "scripts": {
-    "start": "./node_modules/react-scripts/bin/react-scripts.js start",
-    "start:prod": "pushstate-server build",
-    "build": "./node_modules/react-scripts/bin/react-scripts.js build",
-    "test": "./node_modules/react-scripts/bin/react-scripts.js test --env=jsdom",
-    "eject": "./node_modules/react-scripts/bin/react-scripts.js eject",
-    "server": "cd client/api && pm2 start server.js --watch",
-    "proxy": "http://128.199.139.144:3000"
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "lint": "eslint './src/**/*.js*'",
+    "deploy": "webpack -p && gh-pages -d dist"
   },
   "engines": {
     "npm": "6.7.0",
