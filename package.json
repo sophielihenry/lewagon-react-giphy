@@ -30,12 +30,16 @@
     "express": "^4.16.4",
     "giphy-api": "^2.0.1",
     "react": "16.2",
-    "react-dom": "16.2"
+    "react-dom": "16.2",
+    "serve": "^11.0.0"
   },
-  "scripts": {
-    "start": "webpack-dev-server --mode development",
-    "lint": "eslint './src/**/*.js*'",
-    "deploy": "webpack -p && gh-pages -d dist"
+   "scripts": {
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "engines": {
     "npm": "6.7.0",
