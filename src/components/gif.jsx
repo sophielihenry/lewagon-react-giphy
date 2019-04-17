@@ -6,12 +6,15 @@ class Gif extends Component {
 
     return (
       <div className="gifResize">
-          <button className="deleteGiphy"
-                  onClick={() => this.props.deleteGif(this.props.id)}>x</button>
+
         <img src={src}
              alt=""
              className="gif"
              onClick={() => this.props.selectGif(this.props.id)}/>
+
+    { this.props.hideButton ? null :   <button className="deleteGiphy"
+                  onClick={() => this.props.deleteGif(this.props.id)}>x</button> }
+
 
       </div>
       );
