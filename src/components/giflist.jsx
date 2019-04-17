@@ -9,8 +9,6 @@ class Giflist extends Component {
                                            selectGif={this.props.selectGif}/>
 
 
-
-
       )
     }
 
