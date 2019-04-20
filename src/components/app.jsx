@@ -38,14 +38,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="left-scene">
+      <div className="container">
+        <div className="selectedGif">
           <SearchBar search={this.search} />
             <div className="selected-gif">
               <Gif id = {this.state.selectedGifId} hideButton={true}/>
             </div>
         </div>
-        <div className="right-scene">
+        <div className="giflistContainer">
           <Giflist gifs ={this.state.gifs} selectGif={this.selectGif} deleteGif={this.deleteGif}/>
         </div>
       </div>
