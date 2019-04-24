@@ -10,9 +10,7 @@ class Gif extends Component {
              alt=""
              className="gif"
              onClick={() => this.props.selectGif(this.props.id)}/>
-
-    { this.props.hideButton ? null :   <button className="deleteGiphy"
-                  onClick={() => this.props.deleteGif(this.props.id)}>x</button> }
+        { this.props.hideButton ? null :   <button className="deleteGiphy" onClick={() => this.props.deleteGif(this.props.id)}>x</button> }
       </div>
       );
   }

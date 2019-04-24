@@ -14,7 +14,6 @@
   @media (min-width: 1800px) { @content; }
 }
 
-
 body {
   font-family: Helvetica;
 }
@@ -88,6 +87,17 @@ body {
 }
 
   .deleteGiphy {
+    @include for-phone-only {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 15px;
+      outline: none;
+}
+
     position: absolute;
     top:0;
     right:0;
