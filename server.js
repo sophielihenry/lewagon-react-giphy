@@ -13,6 +13,4 @@ app.get('/ping', function (req, res) {
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-app.listen(.listen(process.env.PORT || 8080));
-
-
+app.listen(port);
